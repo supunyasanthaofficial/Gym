@@ -262,7 +262,7 @@ const Home = () => {
               <div className="space-y-6">
                 {/* Point 1 */}
                 <div className="flex items-start">
-                  <div className="shrink-0 w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4 mt-1">
+                  <div className="shrink-0 w-12 h-12  rounded-full flex items-center justify-center text-white font-bold text-xl mr-4 mt-1">
                     1.
                   </div>
                   <div>
@@ -278,7 +278,7 @@ const Home = () => {
 
                 {/* Point 2 */}
                 <div className="flex items-start">
-                  <div className="shrink-0 w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4 mt-1">
+                  <div className="shrink-0 w-12 h-12  rounded-full flex items-center justify-center text-white font-bold text-xl mr-4 mt-1">
                     2.
                   </div>
                   <div>
@@ -294,7 +294,7 @@ const Home = () => {
 
                 {/* Point 3 */}
                 <div className="flex items-start">
-                  <div className="shrink-0 w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4 mt-1">
+                  <div className="shrink-0 w-12 h-12  rounded-full flex items-center justify-center text-white font-bold text-xl mr-4 mt-1">
                     3.
                   </div>
                   <div>
@@ -309,7 +309,7 @@ const Home = () => {
 
                 {/* Point 4 */}
                 <div className="flex items-start">
-                  <div className="shrink-0 w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4 mt-1">
+                  <div className="shrink-0 w-12 h-12  rounded-full flex items-center justify-center text-white font-bold text-xl mr-4 mt-1">
                     4.
                   </div>
                   <div>
@@ -324,7 +324,7 @@ const Home = () => {
 
                 {/* Point 5 */}
                 <div className="flex items-start">
-                  <div className="shrink-0 w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4 mt-1">
+                  <div className="shrink-0 w-12 h-12  rounded-full flex items-center justify-center text-white font-bold text-xl mr-4 mt-1">
                     5.
                   </div>
                   <div>
