@@ -54,7 +54,6 @@ const Footer = () => {
           {/* Logo */}
           <div className="flex items-center mb-3">
             <img src={logo} alt="TGCPM Fitness" className="h-10 w-auto mr-3" />
-            <span className="text-lg font-bold">TGCPM FITNESS</span>
           </div>
 
           <h3 className="text-lg font-bold mb-3">
