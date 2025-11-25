@@ -11,7 +11,7 @@ const Programs = () => {
   const [activeTab, setActiveTab] = useState("ladies");
 
   return (
-    <div className="min-h-screen bg-gray-500 py-16">
+    <div className="min-h-screen bg-[#898989] py-16">
       <div className="max-w-6xl mx-auto px-4">
         {/* Heading */}
         <h1 className="text-4xl font-bold text-center text-black mb-3">
