@@ -25,10 +25,10 @@ const Programs = () => {
 
         {/* Tabs */}
         <div className="flex justify-center mb-10">
-          <div className="bg-white shadow-md rounded-b-none flex p-1">
+          <div className="bg-white shadow-md rounded-xl flex p-1">
             <button
               onClick={() => setActiveTab("ladies")}
-              className={`px-6 py-2 rounded-b-none font-semibold ${
+              className={`px-6 py-2 rounded-xl font-semibold ${
                 activeTab === "ladies"
                   ? "bg-yellow-400 text-black"
                   : "text-gray-600"
@@ -39,7 +39,7 @@ const Programs = () => {
 
             <button
               onClick={() => setActiveTab("gents")}
-              className={`px-6 py-2 rounded-b-none font-semibold ${
+              className={`px-6 py-2 rounded-xl font-semibold ${
                 activeTab === "gents"
                   ? "bg-yellow-400 text-black"
                   : "text-gray-600"
