@@ -1,7 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import header from "../assets/images/header.png";
 
 const Header = () => {
+  const navigate = useNavigate();
+
+  const handleExplorePrograms = () => {
+    navigate("/programs");
+  };
+
   return (
     <header
       className="relative text-white py-20 px-4 text-center bg-cover bg-center bg-no-repeat"
@@ -17,7 +24,10 @@ const Header = () => {
           Unlock your potential with the world's best fitness and training
           programs.
         </p>
-        <button className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105 text-lg">
+        <button
+          onClick={handleExplorePrograms}
+          className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105 text-lg"
+        >
           Explore Our Programs
         </button>
       </div>
