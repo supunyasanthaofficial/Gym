@@ -85,9 +85,6 @@ const Navigation = () => {
                   {item.name}
                 </Link>
               ))}
-              <button className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-2 px-6 rounded-lg transition duration-300 w-full">
-                Join Now
-              </button>
             </div>
           </div>
         )}
