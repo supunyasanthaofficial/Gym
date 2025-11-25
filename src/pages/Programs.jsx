@@ -18,7 +18,7 @@ const Programs = () => {
           Explore Our Programs
         </h1>
 
-        <p className="text-center text-white mb-10">
+        <p className="text-center text-white mb-10 font-semibold">
           Find the perfect fitness program to match your goals and get started
           on your journey today.
         </p>
