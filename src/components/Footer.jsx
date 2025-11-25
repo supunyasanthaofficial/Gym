@@ -48,25 +48,25 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gray-900 text-white py-12 px-4">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="bg-gray-900 text-white py-8 px-4">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-6">
         {/* CTA Section - Now on Left Side */}
         <div>
           {/* Logo */}
-          <div className="flex items-center mb-4">
-            <img src={logo} alt="TGCPM Fitness" className="h-12 w-auto mr-3" />
-            <span className="text-xl font-bold">TGCPM FITNESS</span>
+          <div className="flex items-center mb-3">
+            <img src={logo} alt="TGCPM Fitness" className="h-10 w-auto mr-3" />
+            <span className="text-lg font-bold">TGCPM FITNESS</span>
           </div>
 
-          <h3 className="text-xl font-bold mb-4">
+          <h3 className="text-lg font-bold mb-3">
             Your journey to a stronger you starts here.
           </h3>
         </div>
 
         {/* Quick Links */}
         <div>
-          <h3 className="text-lg font-bold mb-4">QUICK LINKS</h3>
-          <ul className="space-y-2">
+          <h3 className="font-bold mb-3">QUICK LINKS</h3>
+          <ul className="space-y-1 text-sm">
             {quickLinks.map((link) => (
               <li key={link}>
                 <a
@@ -82,8 +82,8 @@ const Footer = () => {
 
         {/* Contact Info */}
         <div>
-          <h3 className="text-lg font-bold mb-4">OUR CONTACTS</h3>
-          <div className="space-y-2 text-gray-400">
+          <h3 className="font-bold mb-3">OUR CONTACTS</h3>
+          <div className="space-y-1 text-gray-400 text-sm">
             <p>Address: ********** </p>
             <p>Phone No: **********</p>
             <p>Email: *********</p>
@@ -93,13 +93,13 @@ const Footer = () => {
 
         {/* Follow Us */}
         <div>
-          <h3 className="text-lg font-bold mb-4">FOLLOW US</h3>
-          <div className="flex space-x-4">
+          <h3 className="font-bold mb-3">FOLLOW US</h3>
+          <div className="flex space-x-3">
             {socialIcons.map((social) => (
               <a
                 key={social.name}
                 href="#"
-                className="bg-gray-800 w-10 h-10 rounded-full flex items-center justify-center hover:bg-yellow-500 transition duration-300"
+                className="bg-gray-800 w-8 h-8 rounded-full flex items-center justify-center hover:bg-yellow-500 transition duration-300"
                 title={social.name}
               >
                 {social.icon}
@@ -110,7 +110,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="max-w-6xl mx-auto mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
+      <div className="max-w-6xl mx-auto mt-6 pt-6 border-t border-gray-800 text-center text-gray-400 text-sm">
         <p>
           &copy; 2025 @ All Rights Reserved | ********* | Designed & Developed
           by EVER EFFICIENT Business Management (Pvt) Ltd.
