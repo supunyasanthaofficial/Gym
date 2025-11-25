@@ -28,7 +28,7 @@ const Programs = () => {
           <div className="bg-white shadow-md rounded-xl flex p-1">
             <button
               onClick={() => setActiveTab("ladies")}
-              className={`px-6 py-2 rounded-xl font-semibold ${
+              className={`px-6 py-2 rounded-xl font-bold ${
                 activeTab === "ladies"
                   ? "bg-yellow-400 text-black"
                   : "text-gray-600"
@@ -39,7 +39,7 @@ const Programs = () => {
 
             <button
               onClick={() => setActiveTab("gents")}
-              className={`px-6 py-2 rounded-xl font-semibold ${
+              className={`px-6 py-2 rounded-xl font-bold ${
                 activeTab === "gents"
                   ? "bg-yellow-400 text-black"
                   : "text-gray-600"
@@ -50,147 +50,156 @@ const Programs = () => {
           </div>
         </div>
 
-        {/* Ladies Programs */}
-        {activeTab === "ladies" && (
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Card 1 */}
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <div className="w-full h-48">
-                <img
-                  src={Wpro3}
-                  className="w-full h-full object-cover"
-                  alt="Ladies Toning"
-                />
+        {/* Cards Container - Fixed alignment */}
+        <div className="grid md:grid-cols-3 gap-8 items-stretch">
+          {/* Ladies Programs */}
+          {activeTab === "ladies" && (
+            <>
+              {/* Card 1 */}
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col h-full">
+                <div className="w-full h-48 shrink-0">
+                  <img
+                    src={Wpro3}
+                    className="w-full h-full object-cover"
+                    alt="Ladies Toning"
+                  />
+                </div>
+                <div className="p-6 flex flex-col grow">
+                  <h3 className="font-semibold text-lg mb-3 text-gray-800">
+                    Ladies' Toning & Fitness
+                  </h3>
+                  <p className="text-gray-600 text-sm mb-6 grow">
+                    Focus on full-body toning, strength, and posture with
+                    targeted exercises.
+                  </p>
+                  <button className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-medium py-3 rounded-lg transition duration-200 mt-auto">
+                    Learn More
+                  </button>
+                </div>
               </div>
-              <div className="p-5">
-                <h3 className="font-semibold text-lg mb-2">
-                  Ladies’ Toning & Fitness
-                </h3>
-                <p className="text-gray-600 text-sm mb-4">
-                  Focus on full-body toning, strength, and posture.
-                </p>
-                <button className="w-full bg-yellow-400 py-2 rounded font-medium">
-                  Learn More
-                </button>
-              </div>
-            </div>
 
-            {/* Card 2 */}
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <div className="w-full h-48">
-                <img
-                  src={Wpro2}
-                  className="w-full h-full object-cover"
-                  alt="Weight Loss"
-                />
+              {/* Card 2 */}
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col h-full">
+                <div className="w-full h-48 shrink-0">
+                  <img
+                    src={Wpro2}
+                    className="w-full h-full object-cover"
+                    alt="Weight Loss"
+                  />
+                </div>
+                <div className="p-6 flex flex-col grow">
+                  <h3 className="font-semibold text-lg mb-3 text-gray-800">
+                    Weight Loss Program
+                  </h3>
+                  <p className="text-gray-600 text-sm mb-6 grow">
+                    Cardio & nutrition support tailored for metabolism and
+                    sustainable weight loss.
+                  </p>
+                  <button className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-medium py-3 rounded-lg transition duration-200 mt-auto">
+                    Learn More
+                  </button>
+                </div>
               </div>
-              <div className="p-5">
-                <h3 className="font-semibold text-lg mb-2">
-                  Weight Loss Program
-                </h3>
-                <p className="text-gray-600 text-sm mb-4">
-                  Cardio & nutrition support tailored for metabolism.
-                </p>
-                <button className="w-full bg-yellow-400 py-2 rounded font-medium">
-                  Learn More
-                </button>
-              </div>
-            </div>
 
-            {/* Card 3 */}
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <div className="w-full h-48">
-                <img
-                  src={Wpro1}
-                  className="w-full h-full object-cover"
-                  alt="Zumba"
-                />
+              {/* Card 3 */}
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col h-full">
+                <div className="w-full h-48 shrink-0">
+                  <img
+                    src={Wpro1}
+                    className="w-full h-full object-cover"
+                    alt="Zumba"
+                  />
+                </div>
+                <div className="p-6 flex flex-col grow">
+                  <h3 className="font-semibold text-lg mb-3 text-gray-800">
+                    Zumba & Dance Fitness
+                  </h3>
+                  <p className="text-gray-600 text-sm mb-6 grow">
+                    High-energy sessions for fitness and stress relief through
+                    fun dance routines.
+                  </p>
+                  <button className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-medium py-3 rounded-lg transition duration-200 mt-auto">
+                    Learn More
+                  </button>
+                </div>
               </div>
-              <div className="p-5">
-                <h3 className="font-semibold text-lg mb-2">
-                  Zumba & Dance Fitness
-                </h3>
-                <p className="text-gray-600 text-sm mb-4">
-                  High-energy sessions for fitness and stress relief.
-                </p>
-                <button className="w-full bg-yellow-400 py-2 rounded font-medium">
-                  Learn More
-                </button>
-              </div>
-            </div>
-          </div>
-        )}
+            </>
+          )}
 
-        {/* Gents Programs */}
-        {activeTab === "gents" && (
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Card 1 */}
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <div className="w-full h-48">
-                <img
-                  src={Mpro4}
-                  className="w-full h-full object-cover"
-                  alt="Muscle Gain"
-                />
+          {/* Gents Programs */}
+          {activeTab === "gents" && (
+            <>
+              {/* Card 1 */}
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col h-full">
+                <div className="w-full h-48 shrink-0">
+                  <img
+                    src={Mpro4}
+                    className="w-full h-full object-cover"
+                    alt="Muscle Gain"
+                  />
+                </div>
+                <div className="p-6 flex flex-col grow">
+                  <h3 className="font-semibold text-lg mb-3 text-gray-800">
+                    Muscle Gain Program
+                  </h3>
+                  <p className="text-gray-600 text-sm mb-6 grow">
+                    Intense strength training focused on hypertrophy and muscle
+                    development.
+                  </p>
+                  <button className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-medium py-3 rounded-lg transition duration-200 mt-auto">
+                    Learn More
+                  </button>
+                </div>
               </div>
-              <div className="p-5">
-                <h3 className="font-semibold text-lg mb-2">
-                  Muscle Gain Program
-                </h3>
-                <p className="text-gray-600 text-sm mb-4">
-                  Intense strength training focused on hypertrophy.
-                </p>
-                <button className="w-full bg-yellow-400 py-2 rounded font-medium">
-                  Learn More
-                </button>
-              </div>
-            </div>
 
-            {/* Card 2 */}
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <div className="w-full h-48">
-                <img
-                  src={Mpro1}
-                  className="w-full h-full object-cover"
-                  alt="Fat Burn"
-                />
+              {/* Card 2 */}
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col h-full">
+                <div className="w-full h-48 shrink-0">
+                  <img
+                    src={Mpro1}
+                    className="w-full h-full object-cover"
+                    alt="Fat Burn"
+                  />
+                </div>
+                <div className="p-6 flex flex-col grow">
+                  <h3 className="font-semibold text-lg mb-3 text-gray-800">
+                    Fat Burn & Conditioning
+                  </h3>
+                  <p className="text-gray-600 text-sm mb-6 grow">
+                    HIIT, circuit training, and cardio-based routines for
+                    maximum fat loss.
+                  </p>
+                  <button className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-medium py-3 rounded-lg transition duration-200 mt-auto">
+                    Learn More
+                  </button>
+                </div>
               </div>
-              <div className="p-5">
-                <h3 className="font-semibold text-lg mb-2">
-                  Fat Burn & Conditioning
-                </h3>
-                <p className="text-gray-600 text-sm mb-4">
-                  HIIT, circuit training, and cardio-based routines.
-                </p>
-                <button className="w-full bg-yellow-400 py-2 rounded font-medium">
-                  Learn More
-                </button>
-              </div>
-            </div>
 
-            {/* Card 3 */}
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-              <div className="w-full h-48">
-                <img
-                  src={Mpro3}
-                  className="w-full h-full object-cover"
-                  alt="Strength"
-                />
+              {/* Card 3 */}
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col h-full">
+                <div className="w-full h-48 shrink-0">
+                  <img
+                    src={Mpro3}
+                    className="w-full h-full object-cover"
+                    alt="Strength"
+                  />
+                </div>
+                <div className="p-6 flex flex-col grow">
+                  <h3 className="font-semibold text-lg mb-3 text-gray-800">
+                    Strength & Powerlifting
+                  </h3>
+                  <p className="text-gray-600 text-sm mb-6 grow">
+                    Heavy lifting for building power and endurance with proper
+                    technique.
+                  </p>
+                  <button className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-medium py-3 rounded-lg transition duration-200 mt-auto">
+                    Learn More
+                  </button>
+                </div>
               </div>
-              <div className="p-5">
-                <h3 className="font-semibold text-lg mb-2">
-                  Strength & Powerlifting
-                </h3>
-                <p className="text-gray-600 text-sm mb-4">
-                  Heavy lifting for building power and endurance.
-                </p>
-                <button className="w-full bg-yellow-400 py-2 rounded font-medium">
-                  Learn More
-                </button>
-              </div>
-            </div>
-          </div>
-        )}
+            </>
+          )}
+        </div>
       </div>
     </div>
   );
