@@ -22,11 +22,13 @@ import Trainers from "./pages/Trainers";
 import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
 import Footer from "./components/Footer";
+import Navigation from "./components/Navigation";
 
 function App() {
   return (
     <Router>
       <div className="App">
+        <Navigation />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about-us" element={<About />} />
