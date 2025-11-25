@@ -1,4 +1,3 @@
-import React from "react";
 import bg1 from "../assets/images/bg1.png";
 import bg2 from "../assets/images/bg2.png";
 import bg3 from "../assets/images/bg3.png";
@@ -17,7 +16,6 @@ const PricingCard = ({ plan }) => {
     }
   };
 
-  // Plan anuwa background colors set karanna
   const getCardBackground = (planId) => {
     switch (planId) {
       case 1: // Basic

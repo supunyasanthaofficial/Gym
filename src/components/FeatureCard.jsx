@@ -1,5 +1,3 @@
-import React from "react";
-
 const FeatureCard = ({ feature, index }) => {
   return (
     <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
