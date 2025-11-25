@@ -1,21 +1,127 @@
 import React from "react";
+import { Phone, Mail, MessageCircle } from "lucide-react";
+import Map from "../assets/images/Map.png";
 
-const Contact = () => {
+export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-gray-50 py-16">
-      <div className="max-w-4xl mx-auto px-4">
-        <h1 className="text-4xl font-bold text-center text-gray-800 mb-8">
-          Contact Us
-        </h1>
-        <div className="bg-white p-8 rounded-lg shadow-md">
-          <p className="text-gray-600 text-lg leading-relaxed">
-            Get in touch with us for any inquiries or to start your fitness
-            journey today.
-          </p>
+    <>
+      <div className="min-h-screen bg-[#898989] text-white py-16 px-6">
+        <div className="max-w-7xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-12">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+              Get In Touch
+            </h1>
+            <p className="text-lg opacity-90 font-semibold">
+              We're here to help you start your fitness journey. Reach out with
+              any questions!
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="space-y-10">
+              <div>
+                <h3 className="text-xl font-semibold mb-6">Direct Contact</h3>
+                <div className="flex flex-wrap gap-4">
+                  <a
+                    href="tel:+1234567890"
+                    className="flex items-center gap-3 bg-[#898989] hover:bg-[#7a7a7a] transition-all rounded-lg px-6 py-4 flex-1 min-w-[140px] border border-gray-600"
+                  >
+                    <Phone className="w-6 h-6 text-yellow-500" />
+                    <span>Phone</span>
+                  </a>
+                  <a
+                    href="mailto:info@gym.com"
+                    className="flex items-center gap-3 bg-[#898989] hover:bg-[#7a7a7a] transition-all rounded-lg px-6 py-4 flex-1 min-w-[140px] border border-gray-600"
+                  >
+                    <Mail className="w-6 h-6 text-yellow-500" />
+                    <span>Email</span>
+                  </a>
+                  <a
+                    href="https://wa.me/1234567890"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 bg-[#898989] hover:bg-[#7a7a7a] transition-all rounded-lg px-6 py-4 flex-1 min-w-[140px] border border-gray-600"
+                  >
+                    <MessageCircle className="w-6 h-6 text-yellow-500" />
+                    <span>WhatsApp</span>
+                  </a>
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold mb-6">
+                  Send us a Message
+                </h3>
+                <form className="space-y-5">
+                  <input
+                    type="text"
+                    placeholder="Name"
+                    required
+                    className="w-full px-4 py-3 bg-[#898989] border border-gray-600 rounded-lg focus:outline-none focus:border-yellow-500 placeholder-white"
+                  />
+                  <input
+                    type="email"
+                    placeholder="Email"
+                    required
+                    className="w-full px-4 py-3 bg-[#898989] border border-gray-600 rounded-lg focus:outline-none focus:border-yellow-500 placeholder-white"
+                  />
+                  <input
+                    type="text"
+                    placeholder="Subject"
+                    className="w-full px-4 py-3 bg-[#898989] border border-gray-600 rounded-lg focus:outline-none focus:border-yellow-500 placeholder-white"
+                  />
+                  <textarea
+                    rows={5}
+                    placeholder="Message"
+                    required
+                    className="w-full px-4 py-3 bg-[#898989] border border-gray-600 rounded-lg focus:outline-none focus:border-yellow-500 placeholder-white resize-none"
+                  ></textarea>
+
+                  <button
+                    type="submit"
+                    className="w-full bg-yellow-500 hover:bg-yellow-400 text-black font-bold py-4 rounded-lg transition duration-200"
+                  >
+                    Send Message
+                  </button>
+                </form>
+              </div>
+            </div>
+
+            <div className="space-y-10">
+              {/* Map */}
+              <div>
+                <h3 className="text-xl font-semibold mb-6">Our Location</h3>
+                <div className="overflow-hidden rounded-lg shadow-2xl border border-gray-700">
+                  <img
+                    src={Map}
+                    alt="Gym Location - Toronto"
+                    className="w-full rounded-lg"
+                  />
+                </div>
+              </div>
+
+              <div className="bg-[#898989] rounded-lg p-8 border border-gray-600">
+                <h3 className="text-xl font-semibold mb-6">Opening Hours</h3>
+                <div className="space-y-5 text-lg">
+                  <div className="flex justify-between">
+                    <span>Monday - Friday</span>
+                    <span className="font-medium">6:00 AM - 11:00 PM</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Saturday</span>
+                    <span className="font-medium">8:00 AM - 9:00 PM</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Sunday</span>
+                    <span className="font-medium">8:00 AM - 8:00 PM</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
-};
-
-export default Contact;
+}
