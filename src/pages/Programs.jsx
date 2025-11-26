@@ -14,11 +14,11 @@ const Programs = () => {
     <div className="min-h-screen bg-[#898989] py-16">
       <div className="max-w-6xl mx-auto px-4">
         {/* Heading */}
-        <h1 className="text-4xl font-bold text-center text-black mb-3">
+        <h1 className="text-4xl font-bold text-center text-white mb-3">
           Explore Our Programs
         </h1>
 
-        <p className="text-center text-white mb-10 font-bold">
+        <p className="text-center text-black mb-10 font-bold">
           Find the perfect fitness program to match your goals and get started
           on your journey today.
         </p>
