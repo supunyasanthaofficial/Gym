@@ -2,7 +2,7 @@ import React from "react";
 import { Phone, Mail, MessageCircle } from "lucide-react";
 import Map from "../assets/images/Map.png";
 
-export default function ContactPage() {
+export default function Contact() {
   return (
     <>
       <div className="min-h-screen bg-[#898989] text-white py-16 px-6">
@@ -38,7 +38,7 @@ export default function ContactPage() {
                     <span>Email</span>
                   </a>
                   <a
-                    href="https://wa.me/1234567890"
+                    href="https://wa.me/00000002222"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 bg-[#898989] hover:bg-[#7a7a7a] transition-all rounded-lg px-6 py-4 flex-1 min-w-[140px] border border-gray-600"
@@ -53,30 +53,49 @@ export default function ContactPage() {
                 <h3 className="text-xl font-semibold mb-6">
                   Send us a Message
                 </h3>
-                <form className="space-y-5">
-                  <input
-                    type="text"
-                    placeholder="Name"
-                    required
-                    className="w-full px-4 py-3 bg-[#898989] border border-gray-600 rounded-lg focus:outline-none focus:border-yellow-500 placeholder-white"
-                  />
-                  <input
-                    type="email"
-                    placeholder="Email"
-                    required
-                    className="w-full px-4 py-3 bg-[#898989] border border-gray-600 rounded-lg focus:outline-none focus:border-yellow-500 placeholder-white"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Subject"
-                    className="w-full px-4 py-3 bg-[#898989] border border-gray-600 rounded-lg focus:outline-none focus:border-yellow-500 placeholder-white"
-                  />
-                  <textarea
-                    rows={5}
-                    placeholder="Message"
-                    required
-                    className="w-full px-4 py-3 bg-[#898989] border border-gray-600 rounded-lg focus:outline-none focus:border-yellow-500 placeholder-white resize-none"
-                  ></textarea>
+                <form className="space-y-6">
+                  <div>
+                    <label className="block text-sm  mb-2 text-white font-semibold">
+                      Name
+                    </label>
+                    <input
+                      type="text"
+                      required
+                      className="w-full px-4 py-3 bg-[#898989] border border-gray-600 rounded-lg focus:outline-none focus:border-yellow-500 placeholder-gray-400"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-semibold mb-2 text-white">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      required
+                      className="w-full px-4 py-3 bg-[#898989] border border-gray-600 rounded-lg focus:outline-none focus:border-yellow-500 placeholder-gray-400"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-semibold mb-2 text-white">
+                      Subject
+                    </label>
+                    <input
+                      type="text"
+                      className="w-full px-4 py-3 bg-[#898989] border border-gray-600 rounded-lg focus:outline-none focus:border-yellow-500 placeholder-gray-400"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-semibold mb-2 text-white">
+                      Message
+                    </label>
+                    <textarea
+                      rows={5}
+                      required
+                      className="w-full px-4 py-3 bg-[#898989] border border-gray-600 rounded-lg focus:outline-none focus:border-yellow-500 placeholder-gray-400 resize-none"
+                    ></textarea>
+                  </div>
 
                   <button
                     type="submit"
@@ -100,14 +119,15 @@ export default function ContactPage() {
                   />
                 </div>
               </div>
-
+              {/* opening hours */}
               <div className="bg-[#898989] rounded-lg p-8 border border-gray-600">
                 <h3 className="text-xl font-semibold mb-6">Opening Hours</h3>
-                <div className="space-y-5 text-lg">
+                <div className="space-y-4">
                   <div className="flex justify-between">
                     <span>Monday - Friday</span>
                     <span className="font-medium">6:00 AM - 11:00 PM</span>
                   </div>
+
                   <div className="flex justify-between">
                     <span>Saturday</span>
                     <span className="font-medium">8:00 AM - 9:00 PM</span>
