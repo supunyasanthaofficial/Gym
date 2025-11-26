@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import TrainerCard from "../components/TrainerCard";
 import T1 from "../assets/images/T1.jpg";
 import T2 from "../assets/images/T2.jpg";
 import T3 from "../assets/images/T3.jpg";
@@ -103,12 +104,12 @@ const TrainersPage = () => {
   return (
     <div className="min-h-screen bg-linear-to-br from-[#898989] to-[#898989] py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <header className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-white mb-4">
+        <header className="align-text-top mb-16">
+          <h1 className="text-5xl font-bold text-white mb-4">
             Meet Our Expert Trainers
           </h1>
 
-          <div className="flex flex-wrap justify-center gap-3 mt-8">
+          <div className="flex flex-wrap justify-top gap-3 mt-10">
             {specialties.map((specialty, index) => (
               <button
                 key={index}
@@ -116,7 +117,7 @@ const TrainersPage = () => {
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                   activeSpecialty === specialty
                     ? "bg-white text-yellow-400 shadow-lg"
-                    : "bg-white text-black hover:bg-white"
+                    : "bg-white text-black hover:bg-yellow-300"
                 }`}
               >
                 {specialty}
@@ -125,54 +126,10 @@ const TrainersPage = () => {
           </div>
         </header>
 
-        {/* Trainers Grid */}
+        {/* Trainers Grid with TrainerCard Component */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {filteredTrainers.map((trainer, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 border border-yellow-500"
-            >
-              {/* Trainer Image */}
-              <div className="h-60 bg-gray-200 relative overflow-hidden">
-                {trainer.image ? (
-                  <img
-                    src={trainer.image}
-                    alt={trainer.name}
-                    className="w-full h-full object-cover"
-                    onError={(e) => {
-                      // Fallback if image fails to load
-                      e.target.style.display = "none";
-                    }}
-                  />
-                ) : null}
-
-                <div
-                  className={`w-full h-full flex items-center justify-center bg-linear-to-br from-blue-500 to-purple-600 ${
-                    trainer.image ? "hidden" : "flex"
-                  }`}
-                >
-                  <span className="text-white text-2xl font-bold">
-                    {trainer.name
-                      .split(" ")
-                      .map((name) => name[0])
-                      .join("")}
-                  </span>
-                </div>
-              </div>
-
-              {/* Trainer Info */}
-              <div className="p-6 text-center">
-                <h3 className="text-xl font-bold text-gray-900 mb-1">
-                  {trainer.name}
-                </h3>
-                <p className="text-yellow-500 font-medium mb-3">
-                  {trainer.role}
-                </p>
-                <p className="text-black font-bold mb-4 leading-relaxed">
-                  {trainer.tagline}
-                </p>
-              </div>
-            </div>
+            <TrainerCard key={index} trainer={trainer} />
           ))}
         </div>
 
