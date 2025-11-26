@@ -102,7 +102,7 @@ const AboutPage = () => {
               Our certified trainers are the heartbeat of our gym. Passionate,
               knowledgeable, and dedicated to your success.
             </p>
-            <div className="w-24 h-1 bg-yellow-500 mx-auto"></div>
+            {/* <div className="w-24 h-1 bg-yellow-500 mx-auto"></div> */}
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
