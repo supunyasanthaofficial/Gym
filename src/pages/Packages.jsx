@@ -279,7 +279,7 @@ const Packages = () => {
                       index % 2 === 0 ? "bg-[#949494]" : "bg-[#898989]"
                     }
                   >
-                    <td className="py-4 px-6 font-medium text-white border-b border-gray-300">
+                    <td className="py-4 px-6 font-bold text-white border-b border-gray-300">
                       {row.feature}
                     </td>
                     <td className="py-4 px-6 text-center border-b border-gray-300">
