@@ -12,7 +12,7 @@ export default function Contact() {
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               Get In Touch
             </h1>
-            <p className="text-lg opacity-90 font-semibold">
+            <p className="text-xl opacity-90 font-semibold">
               We're here to help you start your fitness journey. Reach out with
               any questions!
             </p>
@@ -25,14 +25,14 @@ export default function Contact() {
                 <div className="flex flex-wrap gap-4">
                   <a
                     href="tel:+1234567890"
-                    className="flex items-center gap-3 bg-[#898989] hover:bg-[#7a7a7a] transition-all rounded-lg px-6 py-4 flex-1 min-w-[140px] border border-gray-600"
+                    className="flex items-center gap-3 bg-white text-black hover:bg-[#7a7a7a] transition-all rounded-lg px-6 py-4 flex-1 min-w-[140px] border border-gray-600"
                   >
                     <Phone className="w-6 h-6 text-yellow-500" />
                     <span>Phone</span>
                   </a>
                   <a
                     href="mailto:info@gym.com"
-                    className="flex items-center gap-3 bg-[#898989] hover:bg-[#7a7a7a] transition-all rounded-lg px-6 py-4 flex-1 min-w-[140px] border border-gray-600"
+                    className="flex items-center gap-3 bg-white text-black hover:bg-[#7a7a7a] transition-all rounded-lg px-6 py-4 flex-1 min-w-[140px] border border-gray-600"
                   >
                     <Mail className="w-6 h-6 text-yellow-500" />
                     <span>Email</span>
@@ -41,7 +41,7 @@ export default function Contact() {
                     href="https://wa.me/00000002222"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 bg-[#898989] hover:bg-[#7a7a7a] transition-all rounded-lg px-6 py-4 flex-1 min-w-[140px] border border-gray-600"
+                    className="flex items-center gap-3 bg-white text-black hover:bg-[#7a7a7a] transition-all rounded-lg px-6 py-4 flex-1 min-w-[140px] border border-gray-600"
                   >
                     <MessageCircle className="w-6 h-6 text-yellow-500" />
                     <span>WhatsApp</span>
@@ -61,7 +61,7 @@ export default function Contact() {
                     <input
                       type="text"
                       required
-                      className="w-full px-4 py-3 bg-[#898989] border border-gray-600 rounded-lg focus:outline-none focus:border-yellow-500 placeholder-gray-400"
+                      className="w-full px-4 py-3 bg-white text-black border border-gray-600 rounded-lg focus:outline-none focus:border-yellow-500 placeholder-gray-400"
                     />
                   </div>
 
@@ -72,7 +72,7 @@ export default function Contact() {
                     <input
                       type="email"
                       required
-                      className="w-full px-4 py-3 bg-[#898989] border border-gray-600 rounded-lg focus:outline-none focus:border-yellow-500 placeholder-gray-400"
+                      className="w-full px-4 py-3 bg-white text-black  border border-gray-600 rounded-lg focus:outline-none focus:border-yellow-500 placeholder-gray-400"
                     />
                   </div>
 
@@ -82,7 +82,7 @@ export default function Contact() {
                     </label>
                     <input
                       type="text"
-                      className="w-full px-4 py-3 bg-[#898989] border border-gray-600 rounded-lg focus:outline-none focus:border-yellow-500 placeholder-gray-400"
+                      className="w-full px-4 py-3 bg-white text-black  border border-gray-600 rounded-lg focus:outline-none focus:border-yellow-500 placeholder-gray-400"
                     />
                   </div>
 
@@ -93,7 +93,7 @@ export default function Contact() {
                     <textarea
                       rows={5}
                       required
-                      className="w-full px-4 py-3 bg-[#898989] border border-gray-600 rounded-lg focus:outline-none focus:border-yellow-500 placeholder-gray-400 resize-none"
+                      className="w-full px-4 py-3 bg-white text-black  border border-gray-600 rounded-lg focus:outline-none focus:border-yellow-500 placeholder-gray-400 resize-none"
                     ></textarea>
                   </div>
 
@@ -119,7 +119,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="bg-[#898989] rounded-lg p-8 border border-gray-600">
+              <div className="bg-white text-black rounded-lg p-8 border border-gray-600">
                 <h3 className="text-xl font-semibold mb-6">Opening Hours</h3>
                 <div className="space-y-4">
                   <div className="flex justify-between">
