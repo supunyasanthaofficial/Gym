@@ -15,7 +15,6 @@ const Packages = () => {
           "Access to All Woman-Friendly Classes",
           "Monthly Wellness Assessment",
         ],
-        popular: false,
       },
       {
         name: "Committed",
@@ -27,7 +26,6 @@ const Packages = () => {
           "2 Personal Training Sessions per Month",
           "Personalized Nutrition Guidance",
         ],
-        popular: false,
       },
       {
         name: "All-In",
@@ -40,7 +38,6 @@ const Packages = () => {
           "Premium Nutrition Plan",
           "Locker Service",
         ],
-        popular: false,
       },
     ],
     gents: [
@@ -53,7 +50,6 @@ const Packages = () => {
           "Access to All Classes",
           "Monthly Fitness Assessment",
         ],
-        popular: false,
       },
       {
         name: "Committed",
@@ -65,7 +61,6 @@ const Packages = () => {
           "2 Personal Training Sessions per Month",
           "Nutrition Plan Access",
         ],
-        popular: false,
       },
       {
         name: "All-In",
@@ -78,7 +73,6 @@ const Packages = () => {
           "Personalized Nutrition Plan",
           "Locker Service",
         ],
-        popular: false,
       },
     ],
   };
@@ -158,7 +152,6 @@ const Packages = () => {
   return (
     <div className="min-h-screen bg-linear-to-br from-[#898989] to-[#898989] py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Unlock Your Potential: Choose Your Plan
@@ -206,14 +199,6 @@ const Packages = () => {
                 minHeight: "520px",
               }}
             >
-              {/* {plan.popular && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
-                  <span className="bg-yellow-400 text-black px-6 py-2 rounded-full font-bold text-sm shadow-lg">
-                    MOST POPULAR
-                  </span>
-                </div>
-              )} */}
-
               <div className="p-8 relative z-1 h-full flex flex-col">
                 <div className="grow">
                   <h3 className="text-2xl font-bold text-yellow-500 mb-4">

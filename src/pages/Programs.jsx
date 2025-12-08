@@ -13,7 +13,6 @@ const Programs = () => {
   return (
     <div className="min-h-screen bg-[#898989] py-16">
       <div className="max-w-6xl mx-auto px-4">
-        {/* Heading */}
         <h1 className="text-4xl font-bold text-center text-white mb-3">
           Explore Our Programs
         </h1>
@@ -50,12 +49,9 @@ const Programs = () => {
           </div>
         </div>
 
-        {/* Cards Container - Fixed alignment */}
         <div className="grid md:grid-cols-3 gap-8 items-stretch">
-          {/* Ladies Programs */}
           {activeTab === "ladies" && (
             <>
-              {/* Card 1 */}
               <div className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col h-full">
                 <div className="w-full h-48 shrink-0">
                   <img
@@ -78,7 +74,6 @@ const Programs = () => {
                 </div>
               </div>
 
-              {/* Card 2 */}
               <div className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col h-full">
                 <div className="w-full h-48 shrink-0">
                   <img
@@ -101,7 +96,6 @@ const Programs = () => {
                 </div>
               </div>
 
-              {/* Card 3 */}
               <div className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col h-full">
                 <div className="w-full h-48 shrink-0">
                   <img
@@ -126,10 +120,8 @@ const Programs = () => {
             </>
           )}
 
-          {/* Gents Programs */}
           {activeTab === "gents" && (
             <>
-              {/* Card 1 */}
               <div className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col h-full">
                 <div className="w-full h-48 shrink-0">
                   <img
@@ -152,7 +144,6 @@ const Programs = () => {
                 </div>
               </div>
 
-              {/* Card 2 */}
               <div className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col h-full">
                 <div className="w-full h-48 shrink-0">
                   <img
@@ -175,7 +166,6 @@ const Programs = () => {
                 </div>
               </div>
 
-              {/* Card 3 */}
               <div className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col h-full">
                 <div className="w-full h-48 shrink-0">
                   <img

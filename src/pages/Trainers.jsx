@@ -126,7 +126,6 @@ const TrainersPage = () => {
           </div>
         </header>
 
-        {/* Trainers Grid with TrainerCard Component */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {filteredTrainers.map((trainer, index) => (
             <TrainerCard key={index} trainer={trainer} />

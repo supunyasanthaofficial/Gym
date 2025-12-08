@@ -108,7 +108,6 @@ export default function Contact() {
             </div>
 
             <div className="space-y-10">
-              {/* Map */}
               <div>
                 <h3 className="text-xl font-semibold mb-6">Our Location</h3>
                 <div className="overflow-hidden rounded-lg shadow-2xl border border-gray-700">
@@ -119,7 +118,7 @@ export default function Contact() {
                   />
                 </div>
               </div>
-              {/* opening hours */}
+
               <div className="bg-[#898989] rounded-lg p-8 border border-gray-600">
                 <h3 className="text-xl font-semibold mb-6">Opening Hours</h3>
                 <div className="space-y-4">
