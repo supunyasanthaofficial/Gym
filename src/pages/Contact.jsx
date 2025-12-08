@@ -122,16 +122,16 @@ export default function Contact() {
               <div className="bg-white text-black rounded-lg p-8 border border-gray-600">
                 <h3 className="text-xl font-semibold mb-6">Opening Hours</h3>
                 <div className="space-y-4">
-                  <div className="flex justify-between">
+                  <div className="flex justify-between font-semibold">
                     <span>Monday - Friday</span>
                     <span className="font-medium">6:00 AM - 11:00 PM</span>
                   </div>
 
-                  <div className="flex justify-between">
+                  <div className="flex justify-between font-semibold">
                     <span>Saturday</span>
                     <span className="font-medium">8:00 AM - 9:00 PM</span>
                   </div>
-                  <div className="flex justify-between">
+                  <div className="flex justify-between font-semibold">
                     <span>Sunday</span>
                     <span className="font-medium">8:00 AM - 8:00 PM</span>
                   </div>
