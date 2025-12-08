@@ -1,11 +1,14 @@
 import Header from "../components/Header";
 import vision from "../assets/images/vision.jpg";
 import TrainerCard from "../components/TrainerCard";
+
+//Trainer Images
 import T1 from "../assets/images/T1.jpg";
 import T10 from "../assets/images/T10.jpg";
 import T3 from "../assets/images/T3.jpg";
 import T8 from "../assets/images/T8.jpg";
 
+//Gallery images
 import G1 from "../assets/images/G1.jpg";
 import G2 from "../assets/images/G2.jpg";
 import G3 from "../assets/images/G3.jpg";
