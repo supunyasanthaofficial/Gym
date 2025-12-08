@@ -8,84 +8,71 @@ const PricingCard = ({ plan }) => {
       case 1:
         return bg1;
       case 2:
-        return bg2;
-      case 3:
         return bg3;
+      case 3:
+        return bg2;
       default:
         return bg1;
     }
   };
 
-  const getCardBackground = (planId) => {
-    switch (planId) {
-      case 1: // Basic
-        return "bg-gradient-to-br from-blue-50 to-indigo-100";
-      case 2: // Standard (Highlighted)
-        return "bg-gradient-to-br from-yellow-50 to-orange-100";
-      case 3: // Premium
-        return "bg-gradient-to-br from-purple-50 to-pink-100";
-      default:
-        return "bg-white";
-    }
+  const getTextColor = (planId, highlight) => {
+    if (highlight) return "text-black";
+    return "text-yellow-400";
   };
+
+  const titleColor = getTextColor(plan.id, plan.highlight);
+  const priceColor = getTextColor(plan.id, plan.highlight);
+  const featureColor = getTextColor(plan.id, plan.highlight);
 
   return (
     <div
-      className={`rounded-xl shadow-2xl p-8 relative overflow-hidden border-2 ${
-        plan.highlight
-          ? "border-yellow-500 transform scale-105 shadow-2xl"
-          : "border-gray-200"
-      } transition-all duration-300 hover:shadow-2xl ${getCardBackground(
-        plan.id
-      )}`}
+      className={`relative rounded-2xl overflow-hidden shadow-xl border h-full ${
+        plan.highlight ? "border-yellow-500 scale-105" : "border-gray-300"
+      } transition-all duration-300`}
     >
-      {/* Background Pattern */}
+      {/* Background Image */}
       <div
-        className="absolute inset-0 bg-cover bg-center opacity-10"
+        className="absolute inset-0 bg-cover bg-center opacity-80"
         style={{
           backgroundImage: `url(${getBackgroundImage(plan.id)})`,
         }}
       />
 
-      {/* Content */}
-      <div className="relative z-10 text-center">
-        {/* Plan Name */}
-        <h3 className="text-3xl font-bold text-gray-800 mb-4">{plan.name}</h3>
+      <div className="absolute inset-0 bg-black/10" />
 
-        {/* Price */}
+      <div className="relative z-10 p-8 text-center h-full flex flex-col">
+        <h3 className={`text-3xl font-bold mb-4 ${titleColor}`}>{plan.name}</h3>
+
         <div className="mb-6">
-          <span className="text-4xl font-bold text-gray-900">
+          <span className={`text-4xl font-bold ${priceColor}`}>
             Rs. {plan.price}
           </span>
-          <span className="text-gray-600 ml-2 text-lg">/{plan.period}</span>
+          <span className={`ml-2 text-lg ${priceColor}`}>/{plan.period}</span>
         </div>
 
-        {/* Features List */}
-        <ul className="space-y-4 mb-8 text-left">
+        <ul className="space-y-4 text-left mb-8 grow">
           {plan.features.map((feature, index) => (
             <li key={index} className="flex items-start">
               <svg
-                className="w-6 h-6 text-green-500 mr-3 mt-0.5 shrink-0"
+                className={`w-6 h-6 mr-3 mt-1 ${
+                  plan.highlight ? "text-black" : "text-yellow-400"
+                }`}
                 fill="currentColor"
                 viewBox="0 0 20 20"
               >
-                <path
-                  fillRule="evenodd"
-                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                  clipRule="evenodd"
-                />
+                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
               </svg>
-              <span className="text-gray-700 text-lg">{feature}</span>
+              <span className={`text-lg ${featureColor}`}>{feature}</span>
             </li>
           ))}
         </ul>
 
-        {/* Button */}
         <button
-          className={`w-full py-4 px-6 rounded-xl font-bold text-lg transition duration-300 ${
+          className={`w-full py-4 rounded-xl font-bold text-lg mt-auto transition ${
             plan.highlight
-              ? "bg-yellow-500 hover:bg-yellow-600 text-gray-900 hover:shadow-lg transform hover:scale-105"
-              : "bg-yellow-500 hover:bg-gray-900 text-black hover:shadow-lg transform hover:scale-105"
+              ? "bg-yellow-500 hover:bg-yellow-600 text-black"
+              : "bg-yellow-500 hover:bg-gray-800 text-white"
           }`}
         >
           Choose Plan
