@@ -1,14 +1,15 @@
 import logo from "../assets/images/logo.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const quickLinks = [
-    "Home",
-    "About Us",
-    "Programs",
-    "Packages",
-    "Trainers",
-    "Contact Us",
-    "Blog",
+    { name: "Home", path: "/" },
+    { name: "About Us", path: "/about-us" },
+    { name: "Programs", path: "/programs" },
+    { name: "Packages", path: "/packages" },
+    { name: "Trainers", path: "/trainers" },
+    { name: "Contact Us", path: "/contact-us" },
+    { name: "Blog", path: "/blog" },
   ];
 
   const socialIcons = [
@@ -52,7 +53,13 @@ const Footer = () => {
         <div>
           {/* Logo */}
           <div className="flex items-center mb-3">
-            <img src={logo} alt="TGCPM Fitness" className="h-10 w-auto mr-3" />
+            <Link to="/">
+              <img
+                src={logo}
+                alt="TGCPM Fitness"
+                className="h-10 w-auto mr-3"
+              />
+            </Link>
           </div>
 
           <h3 className="text-lg font-bold mb-3">
@@ -60,18 +67,18 @@ const Footer = () => {
           </h3>
         </div>
 
-        {/* Quick Links */}
+        {/* Quick Links - Now using Link component */}
         <div>
           <h3 className="font-bold mb-3">QUICK LINKS</h3>
           <ul className="space-y-1 text-sm">
             {quickLinks.map((link) => (
-              <li key={link}>
-                <a
-                  href="#"
+              <li key={link.name}>
+                <Link
+                  to={link.path}
                   className="text-gray-400 hover:text-white transition duration-300"
                 >
-                  {link}
-                </a>
+                  {link.name}
+                </Link>
               </li>
             ))}
           </ul>
@@ -110,7 +117,16 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto mt-6 pt-6 border-t border-gray-800 text-center text-gray-400 text-sm">
         <p>
           &copy; 2025 @ All Rights Reserved | ********* | Designed & Developed
-          by EVER EFFICIENT Business Management (Pvt) Ltd.
+          by{" "}
+          <a
+            href="https://everefficient.lk/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-yellow-400 hover:text-yellow-300 font-medium underline transition duration-300"
+          >
+            EVER EFFICIENT Business Management (Pvt) Ltd
+          </a>
+          .
         </p>
       </div>
     </footer>
