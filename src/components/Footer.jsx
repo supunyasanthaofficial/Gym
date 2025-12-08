@@ -49,7 +49,6 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white py-8 px-4">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-6">
-        {/* CTA Section - Now on Left Side */}
         <div>
           {/* Logo */}
           <div className="flex items-center mb-3">
