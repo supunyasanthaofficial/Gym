@@ -6,6 +6,15 @@ import T10 from "../assets/images/T10.jpg";
 import T3 from "../assets/images/T3.jpg";
 import T8 from "../assets/images/T8.jpg";
 
+import G1 from "../assets/images/G1.jpg";
+import G2 from "../assets/images/G2.jpg";
+import G3 from "../assets/images/G3.jpg";
+import G4 from "../assets/images/G4.jpg";
+import G5 from "../assets/images/G5.jpg";
+import G6 from "../assets/images/G6.jpg";
+import G7 from "../assets/images/G7.jpg";
+import G8 from "../assets/images/G8.jpg";
+
 const AboutPage = () => {
   const trainers = [
     {
@@ -32,6 +41,17 @@ const AboutPage = () => {
       specialty: "Holistic Wellness",
       image: T8,
     },
+  ];
+
+  const galleryImages = [
+    { id: 1, src: G1, alt: "Gym Facility 1" },
+    { id: 2, src: G2, alt: "Gym Facility 2" },
+    { id: 3, src: G3, alt: "Gym Members Training" },
+    { id: 4, src: G4, alt: "Weight Training Area" },
+    { id: 5, src: G5, alt: "Cardio Section" },
+    { id: 6, src: G6, alt: "Group Class Session" },
+    { id: 7, src: G7, alt: "Modern Equipment" },
+    { id: 8, src: G8, alt: "Locker Room" },
   ];
 
   return (
@@ -91,7 +111,49 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Trainers Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Our Gym Gallery
+            </h2>
+            <p className="text-xl text-gray-600 font-semibold max-w-3xl mx-auto mb-8">
+              Take a look at our state-of-the-art facilities, modern equipment,
+              and vibrant community
+            </p>
+            <div className="w-24 h-1 bg-yellow-500 mx-auto"></div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {galleryImages.map((image) => (
+              <div
+                key={image.id}
+                className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+              >
+                <div className="aspect-square overflow-hidden">
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+                <div className="absolute inset-0 bg-linear-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                  <div className="p-4 text-white">
+                    <p className="font-semibold">{image.alt}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-gray-600 font-medium">
+              More than just a gym - it's a lifestyle destination
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[#898989]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -102,7 +164,6 @@ const AboutPage = () => {
               Our certified trainers are the heartbeat of our gym. Passionate,
               knowledgeable, and dedicated to your success.
             </p>
-            {/* <div className="w-24 h-1 bg-yellow-500 mx-auto"></div> */}
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
