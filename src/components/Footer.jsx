@@ -122,7 +122,7 @@ const Footer = () => {
             href="https://everefficient.lk/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-yellow-400 hover:text-yellow-300 font-medium underline transition duration-300"
+            className="text-gray-400 hover:text-yellow-300 font-medium underline transition duration-300"
           >
             EVER EFFICIENT Business Management (Pvt) Ltd
           </a>
