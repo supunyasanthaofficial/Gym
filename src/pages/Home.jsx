@@ -54,7 +54,7 @@ const Home = () => {
           <h2 className="text-5xl font-bold text-center text-gray-800 mb-12">
             Featured Packages
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 ">
             {pricingPlans.map((plan, index) => (
               <PricingCard key={index} plan={plan} />
             ))}
