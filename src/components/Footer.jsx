@@ -47,7 +47,6 @@ const Footer = () => {
     },
   ];
 
-  // Simple scroll to top function
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -69,14 +68,14 @@ const Footer = () => {
             </Link>
           </div>
 
-          <h3 className="text-lg font-bold mb-3">
+          <h3 className="text-2xl font-bold mb-3">
             Your journey to a stronger you starts here.
           </h3>
         </div>
 
         <div>
-          <h3 className="font-bold mb-3">QUICK LINKS</h3>
-          <ul className="space-y-1 text-sm">
+          <h3 className=" text-2xl font-bold mb-3">QUICK LINKS</h3>
+          <ul className="space-y-1 text-lg">
             {quickLinks.map((link) => (
               <li key={link.name}>
                 <Link
@@ -92,8 +91,8 @@ const Footer = () => {
         </div>
 
         <div>
-          <h3 className="font-bold mb-3">OUR CONTACTS</h3>
-          <div className="space-y-1 text-gray-400 text-sm">
+          <h3 className="  text-2xl font-bold mb-3">OUR CONTACTS</h3>
+          <div className=" space-y-1 text-gray-400 text-lg">
             <p>Address: ********** </p>
             <p>Phone No: **********</p>
             <p>Email: *********</p>
@@ -102,7 +101,7 @@ const Footer = () => {
         </div>
 
         <div>
-          <h3 className="font-bold mb-3">FOLLOW US</h3>
+          <h3 className="text-2xl font-bold mb-3">FOLLOW US</h3>
           <div className="flex space-x-3">
             {socialIcons.map((social) => (
               <a
@@ -118,7 +117,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto mt-6 pt-6 border-t border-gray-800 text-center text-gray-400 text-sm">
+      <div className="max-w-6xl mx-auto mt-6 pt-6 border-t border-gray-800 text-xl-center text-center text-gray-400 text-sm">
         <p>
           &copy; 2025 @ All Rights Reserved | ********* | Designed & Developed
           by{" "}
@@ -126,7 +125,7 @@ const Footer = () => {
             href="https://everefficient.lk/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-400 hover:text-yellow-300 font-medium underline transition duration-300"
+            className="text-gray-400 hover:text-yellow-300 font-medium  transition duration-300"
           >
             EVER EFFICIENT Business Management (Pvt) Ltd
           </a>
