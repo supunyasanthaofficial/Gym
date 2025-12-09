@@ -29,7 +29,7 @@ const TrainerCard = ({ trainer }) => {
 
       <div className="p-6 text-center">
         <h3 className="text-xl font-bold text-gray-900 mb-1">{trainer.name}</h3>
-        <p className="text-yellow-500 font-medium mb-3">{trainer.role}</p>
+        <p className="text-yellow-600 font-bold mb-3">{trainer.role}</p>
         <p className="text-black font-bold mb-4 leading-relaxed">
           {trainer.tagline}
         </p>
