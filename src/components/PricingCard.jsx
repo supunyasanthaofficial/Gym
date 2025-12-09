@@ -30,7 +30,7 @@ const PricingCard = ({ plan }) => {
     <div
       className={`relative rounded-2xl overflow-hidden shadow-xl border h-full transform transition-all duration-500 ease-out hover:scale-[1.03] hover:shadow-2xl hover:shadow-yellow-500/30 group ${
         plan.highlight
-          ? "border-yellow-500 scale-105 hover:scale-[1.08] hover:border-yellow-400 hover:ring-4 hover:ring-yellow-500/50"
+          ? "border-yellow-500  hover:scale-[1.08] hover:border-yellow-400 hover:ring-4 hover:ring-yellow-500/50"
           : "border-gray-300 hover:border-yellow-400"
       }`}
     >
