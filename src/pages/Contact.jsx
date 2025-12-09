@@ -1,13 +1,11 @@
 import React from "react";
 import { Phone, Mail, MessageCircle } from "lucide-react";
-import Map from "../assets/images/Map.png";
 
 export default function Contact() {
   return (
     <>
       <div className="min-h-screen bg-[#898989] text-white py-16 px-6">
         <div className="max-w-7xl mx-auto">
-          {/* Header */}
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               Get In Touch
@@ -111,11 +109,17 @@ export default function Contact() {
               <div>
                 <h3 className="text-xl font-semibold mb-6">Our Location</h3>
                 <div className="overflow-hidden rounded-lg shadow-2xl border border-gray-700">
-                  <img
-                    src={Map}
-                    alt="Gym Location - Toronto"
-                    className="w-full rounded-lg"
-                  />
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15828.864938450379!2d80.642048!3d7.329594299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae367fcd15cfee3%3A0xfb5162d7cdc50640!2sNimali%20Auto%20Care!5e0!3m2!1sen!2slk!4v1765193320384!5m2!1sen!2slk"
+                    width="100%"
+                    height="450"
+                    style={{ border: 0 }}
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="w-full h-[450px] rounded-lg"
+                    title="TGCPM Fitness Location"
+                  ></iframe>
                 </div>
               </div>
 
