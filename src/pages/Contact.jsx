@@ -110,7 +110,7 @@ export default function Contact() {
                 <h3 className="text-xl font-semibold mb-6">Our Location</h3>
                 <div className="overflow-hidden rounded-lg shadow-2xl border border-gray-700">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15828.864938450379!2d80.642048!3d7.329594299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae367fcd15cfee3%3A0xfb5162d7cdc50640!2sNimali%20Auto%20Care!5e0!3m2!1sen!2slk!4v1765193320384!5m2!1sen!2slk"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235.11516359340115!2d80.67895212195494!3d7.278955045575232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae367be19d02d7d%3A0xfa67bb9a7082d197!2sEVER%20EFFICIENT%20Business%20Management!5e1!3m2!1sen!2slk!4v1765257553577!5m2!1sen!2slk"
                     width="100%"
                     height="450"
                     style={{ border: 0 }}
