@@ -47,13 +47,20 @@ const Footer = () => {
     },
   ];
 
+  // Simple scroll to top function
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <footer className="bg-gray-900 text-white py-8 px-4">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-6">
         <div>
-          {/* Logo */}
           <div className="flex items-center mb-3">
-            <Link to="/">
+            <Link to="/" onClick={scrollToTop}>
               <img
                 src={logo}
                 alt="TGCPM Fitness"
@@ -67,7 +74,6 @@ const Footer = () => {
           </h3>
         </div>
 
-        {/* Quick Links - Now using Link component */}
         <div>
           <h3 className="font-bold mb-3">QUICK LINKS</h3>
           <ul className="space-y-1 text-sm">
@@ -75,7 +81,8 @@ const Footer = () => {
               <li key={link.name}>
                 <Link
                   to={link.path}
-                  className="text-gray-400 hover:text-white transition duration-300"
+                  onClick={scrollToTop}
+                  className="text-gray-400 hover:text-white transition duration-300 block hover:underline"
                 >
                   {link.name}
                 </Link>
@@ -84,7 +91,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Contact Info */}
         <div>
           <h3 className="font-bold mb-3">OUR CONTACTS</h3>
           <div className="space-y-1 text-gray-400 text-sm">
@@ -95,7 +101,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Follow Us */}
         <div>
           <h3 className="font-bold mb-3">FOLLOW US</h3>
           <div className="flex space-x-3">
@@ -113,7 +118,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom Bar */}
       <div className="max-w-6xl mx-auto mt-6 pt-6 border-t border-gray-800 text-center text-gray-400 text-sm">
         <p>
           &copy; 2025 @ All Rights Reserved | ********* | Designed & Developed

@@ -15,31 +15,38 @@ const Navigation = () => {
     { name: "Blog", path: "/blog" },
   ];
 
+  // Simple scroll to top function
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+    setIsMenuOpen(false);
+  };
+
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center py-4">
-          {/* Logo - Left side */}
           <div className="flex items-center gap-2">
-            <Link to="/">
+            <Link to="/" onClick={scrollToTop}>
               <img src={logo} alt="TGCPM Fitness Logo" className="h-10 w-10" />
             </Link>
           </div>
 
-          {/* Desktop Menu - Center */}
           <div className="hidden md:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2">
             {menuItems.map((item, index) => (
               <Link
                 key={index}
                 to={item.path}
-                className="text-gray-700 hover:text-yellow-500 font-medium transition duration-300"
+                onClick={scrollToTop}
+                className="text-gray-700 hover:text-yellow-500 font-medium transition duration-300 hover:underline"
               >
                 {item.name}
               </Link>
             ))}
           </div>
 
-          {/* Mobile Menu Button - Right side */}
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -71,7 +78,6 @@ const Navigation = () => {
           </div>
         </div>
 
-        {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-200">
             <div className="flex flex-col space-y-4">
@@ -79,8 +85,8 @@ const Navigation = () => {
                 <Link
                   key={index}
                   to={item.path}
-                  className="text-gray-700 hover:text-yellow-500 font-medium transition duration-300 py-2"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={scrollToTop}
+                  className="text-gray-700 hover:text-yellow-500 font-medium transition duration-300 py-2 hover:underline"
                 >
                   {item.name}
                 </Link>
