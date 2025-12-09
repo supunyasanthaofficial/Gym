@@ -150,7 +150,7 @@ const AboutPage = () => {
           </div>
 
           <div className="text-center mt-12">
-            <p className="text-black font-bold">
+            <p className="text-black font-bold text-xl">
               More than just a gym - it's a lifestyle destination
             </p>
           </div>
