@@ -1,6 +1,7 @@
 import bg1 from "../assets/images/bg1.png";
 import bg2 from "../assets/images/bg2.png";
-import bg3 from "../assets/images/bg3.png";
+
+import bg4 from "../assets/images/bg4.png";
 
 const PricingCard = ({ plan }) => {
   const getBackgroundImage = (planId) => {
@@ -8,7 +9,7 @@ const PricingCard = ({ plan }) => {
       case 1:
         return bg1;
       case 2:
-        return bg3;
+        return bg4;
       case 3:
         return bg2;
       default:
@@ -17,7 +18,7 @@ const PricingCard = ({ plan }) => {
   };
 
   const getTextColor = (planId, highlight) => {
-    if (highlight) return "text-black";
+    if (highlight) return "text-yellow-500";
     return "text-yellow-400";
   };
 
@@ -72,7 +73,7 @@ const PricingCard = ({ plan }) => {
               <svg
                 className={`w-6 h-6 mr-3 mt-1 transition-colors duration-300 group-hover:scale-110 ${
                   plan.highlight
-                    ? "text-black group-hover:text-white"
+                    ? "text-yellow-500 group-hover:text-white"
                     : "text-yellow-400 group-hover:text-white"
                 }`}
                 fill="currentColor"
