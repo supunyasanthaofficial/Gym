@@ -116,7 +116,7 @@ const TrainersPage = () => {
                 onClick={() => setActiveSpecialty(specialty)}
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                   activeSpecialty === specialty
-                    ? "bg-white text-yellow-400 shadow-lg"
+                    ? "bg-yellow-300 text-black shadow-lg"
                     : "bg-white text-black hover:bg-yellow-300"
                 }`}
               >
